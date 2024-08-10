@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(109.6deg, rgb(255, 230, 109) 11.2%, rgb(87, 232, 107) 100.2%);
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    
+}
+h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+}
+.joke-container{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0,0.8);
+    box-shadow: 20px 20px 40px rgba(97,63,0,0.4);
+    max-width: 80%;
+    max-height: 80%;
+    margin: 10px;
+    border-radius: 1rem; 
+    position:absolute;
+}
+.laughing-image{
+    max-width: 15vw;
+}
+.joke{
+    font-weight:500;
+    font-size: 2rem;
+    word-wrap: break-word;
+    line-height: 2rem;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: all 1.5s;
+}
+.fade{
+    opacity: 1;
+}
+.new-joke-btn{
+    padding: 1rem 2rem;
+    background-color:rgb(254, 203, 101);
+    border: none;
+    border-radius: 0.3rem;
+    box-shadow: 4px 4px 7px 0.5px rgba(255, 255, 255,0.2);
+    color: #171721;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    margin: 2rem;
+    transition: all 0.3s,transform 0.2s;
+}
+
+.new-joke-btn:hover{
+    background-color:rgb(235, 190, 80);
+}
+.new-joke-btn:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    .joke-container {
+        max-width: 90%;
+        padding: 1rem;
+    }
+    .joke{
+        font-size: 1.2rem;
+    }
+    .laughing-image {
+        max-width: 25vw;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .joke-container {
+        max-width: 95%;
+        max-height: 80%;
+    }
+    .joke{
+        font-size: 0.7rem;
+        font-weight: 700;
+        line-height: 1rem;
+    }
+    .laughing-image {
+        max-width: 35vw;
+    }
+
+    .new-joke-btn {
+        padding: 0.5rem 1.5rem;
+        font-size: 0.7rem;
+    }
+}
